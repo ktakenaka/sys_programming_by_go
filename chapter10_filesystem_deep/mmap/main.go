@@ -23,7 +23,7 @@ func main() {
 	}
 	defer f.Close()
 
-	m, err := mmap.Map(f, mmap.RDWR, 0)
+	m, err := mmap.Map(f, mmap.COPY, 0)
 	if err != nil {
 		panic(err)
 	}
